@@ -1,0 +1,15 @@
+{
+    "manifest_version": 2,
+    "name": "Disable YouTube Seek by Number",
+    "version": "1.0",
+
+    "description": "Disables the YouTube 0-9 keyboard shortcuts which seek to different times on a video",
+
+    "content_scripts": [
+	{
+	    "matches": ["*://*.youtube.com/*"],
+	    "js": ["youtube-disable-number-seek.js"]
+	}
+    ]
+
+}
