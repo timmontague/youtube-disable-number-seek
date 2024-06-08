@@ -2,7 +2,11 @@ ARCHIVE := youtube-disable-number-seek.zip
 FILES := $(wildcard *.js) manifest.json
 
 .PHONY: clean build
+
+$(ARCHIVE) : $(FILES)
+	zip --recurse-paths --filesync $(ARCHIVE) $(FILES)
+
 build:
-	zip -r -FS $(ARCHIVE) $(FILES)
+	$(ARCHIVE)
 clean:
-	rm -f $(ARCHIVE)
+	rm --force $(ARCHIVE)
