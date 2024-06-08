@@ -2,9 +2,9 @@
 
 ## What?
 
-This is a Firefox extension which disables the `0`-`9` keyboard shortcuts on
-YouTube, which seek to a percentage of the video, i.e. the `0` key seeks the
-beginning of the video, the `1` key seeks to 10%, etc.
+This is a Firefox extension which disables the `0`-`9`, `Home` and `End`
+keyboard shortcuts on YouTube, which seek to a percentage of the video, i.e.
+the `0` key seeks the beginning of the video, the `1` key seeks to 10%, etc.
 
 ## Why?
 
