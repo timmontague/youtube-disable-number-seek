@@ -7,16 +7,19 @@
  */
 
 function keyboard_event_handler(e) {
-    // Don't prevent entering numbers in input areas
+    // Don't prevent entering numbers, Home/End in input areas
     if (e.target.tagName == 'INPUT' ||
-	e.target.tagName == 'SELECT' ||
-	e.target.tagName == 'TEXTAREA' ||
-	e.target.isContentEditable) {
-	return;
+        e.target.tagName == 'SELECT' ||
+        e.target.tagName == 'TEXTAREA' ||
+        e.target.isContentEditable) {
+        return;
     }
-    // Trap number keys
-    if ((e.code >= 'Digit0' && e.code <= 'Digit9') || (e.code >= 'Numpad0' && e.code <= 'Numpad9')) {
-	e.stopImmediatePropagation();
+    // Trap number keys and Home/End keys
+    if ((e.code >= 'Digit0' && e.code <= 'Digit9') || 
+        (e.code >= 'Numpad0' && e.code <= 'Numpad9') ||
+        e.code === 'Home' || 
+        e.code === 'End') {
+        e.stopImmediatePropagation();
     }
 }
 window.addEventListener('keydown', keyboard_event_handler, true);
