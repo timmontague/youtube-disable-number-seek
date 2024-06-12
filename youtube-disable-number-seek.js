@@ -7,6 +7,7 @@
  */
 
 const settings = {
+    disable_numpad_keys: true,
     disable_0: true,
     disable_home: true,
     disable_end: true,
@@ -35,7 +36,7 @@ function keyboard_event_handler(e) {
 
     // Trap number keys and Home/End keys
     if ((e.code >= 'Digit1' && e.code <= 'Digit9') || 
-        (e.code >= 'Numpad1' && e.code <= 'Numpad9') ||
+        (settings.disable_numpad_keys && e.code >= 'Numpad1' && e.code <= 'Numpad9') ||
         (settings.disable_0 && e.code === 'Digit0') ||
         (settings.disable_0 && e.code === 'Numpad0') ||
         (settings.disable_home && e.code === 'Home') || 
