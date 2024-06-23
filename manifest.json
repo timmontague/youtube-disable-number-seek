@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Disable YouTube Seek by Number",
-    "version": "1.3",
+    "version": "1.4",
 
     "description": "Disables the YouTube 0-9, Home and End keyboard shortcuts which seek to different times on a video",
 
@@ -14,5 +14,17 @@
 	    "all_frames": true,
             "js": ["youtube-disable-number-seek.js"]
         }
-    ]
+    ],
+
+    "options_ui": {
+        "page": "settings.html"
+    },
+
+    "permissions": ["storage"],
+
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "{2218c45d-e6e5-40e3-97d9-756409e82ad4}"
+        }
+    }
 }

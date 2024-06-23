@@ -1,5 +1,5 @@
 ARCHIVE := youtube-disable-number-seek.zip
-FILES := $(wildcard *.js) manifest.json
+FILES := $(wildcard *.js) $(wildcard *.html) manifest.json
 
 .PHONY: clean build
 
